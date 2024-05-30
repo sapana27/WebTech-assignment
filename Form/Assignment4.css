@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 8rem;
+    display: inline-block;
+    font-style: bold;
+}
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+textarea {
+    resize: vertical; /* Allows vertical resizing of textarea */
+}
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #45a049;
+}
