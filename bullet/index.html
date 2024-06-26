@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom List Style</title>
+    <style>
+        ul.custom-bullet{
+         list-style-type: none;
+         padding: 0;
+        }
+        /* ul.custom-bullet li::before{ */
+            /* content: '\25A0'; Unicode for rectangle (■) */
+            /* color: black;
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            margin-left: -1rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            vertical-align: middle;
+          } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li> Home</li>
+        <li> About</li>
+        <li> Carrers</li>
+        <li> Contact</li>
+    </ul>
+    <br>
+    <ul class="custom-bullet">
+        <li>&#9632; Home</li>
+        <li>&#9632; About</li>
+        <li>&#9632; Carrers</li>
+        <li>&#9632; Contact</li>
+    </ul>
+</body>
+</html>
