@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight serched content</title>
+    <style>
+        .highlight{
+          background-color: rgb(122, 168, 196);
+          font-size: large;
+          color: rgb(228, 199, 200);
+        }
+        #container1{
+            height: 100%;
+            margin-top: 20%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        #container2{
+            width: 50%;
+            margin-top: 4%;
+            background-color: rgb(163, 122, 20);
+            color:white;
+            margin-left: 25%;
+
+        }
+        body{
+            background-color: rgb(204, 237, 237);
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <label>
+            <input type="text" id="Searchbox" placeholder="Enter text to search">
+            <button onclick="Highlight()">Find</button>
+        </label>
+    </div>
+    <div id="container2">
+        <p id="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis atque optio quisquam sunt voluptates accusantium maxime dicta voluptate cupiditate suscipit explicabo eaque at nesciunt delectus laborum quis et, iste nostrum!
+        Veniam, doloribus qui? Amet ex vero inventore optio doloribus veritatis molestias mollitia perspiciatis reiciendis quam modi id fugiat illo temporibus odit, beatae corporis at quis eligendi. Quas corrupti beatae sequi.
+        Aliquid, laborum beatae. Delectus nemo, magnam quo, incidunt cum, consectetur rerum beatae necessitatibus exercitationem aut animi hic repudiandae ea. Repellat maiores voluptates praesentium unde qui ipsam, sunt libero architecto fuga.
+        Iste illo eum, eaque impedit ipsum, totam laborum error, obcaecati eius dignissimos excepturi quae commodi voluptate? Incidunt similique odit explicabo quaerat praesentium, consequuntur provident? Pariatur doloremque modi ex dolorem iure.
+        Distinctio non, iste voluptas quia earum modi ab reprehenderit. Provident natus sit sunt voluptates necessitatibus! Sapiente similique enim ad, quae laudantium dignissimos ut optio, ducimus necessitatibus suscipit, nesciunt ab error!</p>
+    </div>
+    <script>
+        function Highlight(){
+            var text= document.getElementById('Searchbox').value;
+            var paragraph=document.getElementById('paragraph');
+            var content= paragraph.innerHTML;
+            var regex= new RegExp(text+ 'gi');
+            var highlightedText = content.replace(regex, function(match) {
+                return '<span class="highlight">' + match + '</span>';
+            });
+            if (highlightedText === content) { 
+                alert('Searched word is not found.');
+            }
+            paragraph.innerHTML = highlightedText;
+        }
+
+        
+    </script>
+</body>
+</html>

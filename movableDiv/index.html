@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable div with cursor</title>
+    <style>
+      body{
+        background-color: rgb(171, 124, 48);
+      }
+      #movableDiv{
+        height: 15rem;
+        width: 15rem;
+        padding-top: 10rem;
+        position: absolute;
+        background-color: rgb(151, 80, 80);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        pointer-events: none;/*ensure no interference in cursor movement*/
+      }
+    </style>
+</head>
+<body>
+    <div id="movableDiv">Hi Sapana, I'll be moving with you 😉 </div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+         const movableDiv= document.getElementById('movableDiv');
+        movableDiv.style.left= e.pageX + 'px';
+        movableDiv.style.top= e.pageY + 'px';
+        })
+    </script>
+</body>
+</html>
